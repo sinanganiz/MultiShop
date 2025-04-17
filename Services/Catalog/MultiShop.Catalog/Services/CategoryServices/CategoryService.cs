@@ -3,7 +3,6 @@ using MongoDB.Driver;
 using MultiShop.Catalog.Dtos.CategoryDtos;
 using MultiShop.Catalog.Entities;
 using MultiShop.Catalog.Settings;
-using ZstdSharp.Unsafe;
 
 namespace MultiShop.Catalog.Services.CategoryServices;
 
