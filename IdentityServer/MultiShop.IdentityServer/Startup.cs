@@ -30,7 +30,7 @@ namespace MultiShop.IdentityServer
         {
             services.AddLocalApiAuthentication();
 
-            services.AddControllersWithViews();
+            services.AddControllers();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -73,13 +73,6 @@ namespace MultiShop.IdentityServer
 
         public void Configure(IApplicationBuilder app)
         {
-            if (Environment.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
-            }
-
-            app.UseStaticFiles();
 
             app.UseRouting();
             app.UseIdentityServer();
