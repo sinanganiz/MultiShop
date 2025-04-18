@@ -1,13 +1,16 @@
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.IdentityServer.Dtos;
 using MultiShop.IdentityServer.Models;
+using static IdentityServer4.IdentityServerConstants;
 
 namespace MultiShop.IdentityServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(LocalApi.PolicyName)]
     public class RegistersController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
