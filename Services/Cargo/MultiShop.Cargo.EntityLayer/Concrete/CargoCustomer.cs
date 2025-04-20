@@ -1,5 +1,3 @@
-using System;
-
 namespace MultiShop.Cargo.EntityLayer.Concrete;
 
 public class CargoCustomer
