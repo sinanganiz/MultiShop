@@ -5,8 +5,8 @@ namespace MultiShop.Basket.Settings;
 
 public class RedisService
 {
-    private readonly string _host { get; set; }
-    private readonly int _port { get; set; }
+    private string _host { get; set; }
+    private int _port { get; set; }
     private ConnectionMultiplexer _connectionMultiplexer;
 
     public RedisService(string host, int port)
