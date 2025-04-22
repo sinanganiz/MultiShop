@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Catalog.Dtos.ProductImageDtos;
 using MultiShop.Catalog.Services.ProductImageServices;
@@ -6,6 +7,8 @@ namespace MultiShop.Catalog.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[AllowAnonymous]
+//[Authorize]
 public class ProductImagesController : ControllerBase
 { private readonly IProductImageService _productImageService;
 
