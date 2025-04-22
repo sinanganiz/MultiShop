@@ -22,8 +22,8 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> ProductList()
     {
-        var categories = await _productService.GetAllProductAsync();
-        return Ok(categories);
+        var products = await _productService.GetAllProductAsync();
+        return Ok(products);
     }
 
     [HttpGet("{id}")]
@@ -54,5 +54,10 @@ public class ProductsController : ControllerBase
         return Ok("Product updated.");
     }
 
-
+    [HttpGet("ProductListWithCategory")]
+    public async Task<IActionResult> ProductListWithCategory()
+    {
+        var products = await _productService.GetAllProductsWithCategoryAsync();
+        return Ok(products);
+    }
 }
