@@ -1,0 +1,30 @@
+﻿@model CreateFeaturedSliderDto
+
+@{
+	ViewData["Title"] = "CreateFeaturedSlider";
+	Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="chart-box">
+				<h4>Öne Çıkan Ekle</h4>
+				<div class="bs-example">
+					<form method="post">
+						<label>Öne Çıkan Başlık</label>
+						<input type="text" class="form-control" asp-for="Title" />
+						<br />
+						<label>Öne Çıkan Açıklama</label>
+						<input type="text" class="form-control" asp-for="Description" />
+						<br />
+						<label>Öne Çıkan Görsel</label>
+						<input type="text" class="form-control" asp-for="ImageUrl" />
+						<br />
+						<button class="btn btn-primary">Ekle</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
