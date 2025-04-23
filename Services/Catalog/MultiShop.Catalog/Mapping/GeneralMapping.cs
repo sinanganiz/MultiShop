@@ -1,5 +1,6 @@
 using AutoMapper;
 using MultiShop.Catalog.Dtos.CategoryDtos;
+using MultiShop.Catalog.Dtos.FeaturedDtos;
 using MultiShop.Catalog.Dtos.FeaturedSliderDtos;
 using MultiShop.Catalog.Dtos.ProductDetailDtos;
 using MultiShop.Catalog.Dtos.ProductDtos;
@@ -44,5 +45,10 @@ public class GeneralMapping : Profile
         CreateMap<SpecialOffer, CreateSpecialOfferDto>().ReverseMap();
         CreateMap<SpecialOffer, UpdateSpecialOfferDto>().ReverseMap();
         CreateMap<SpecialOffer, GetByIdSpecialOfferDto>().ReverseMap();
+
+        CreateMap<Featured, ResultFeaturedDto>().ReverseMap();
+        CreateMap<Featured, CreateFeaturedDto>().ReverseMap();
+        CreateMap<Featured, UpdateFeaturedDto>().ReverseMap();
+        CreateMap<Featured, GetByIdFeaturedDto>().ReverseMap();
     }
 }
