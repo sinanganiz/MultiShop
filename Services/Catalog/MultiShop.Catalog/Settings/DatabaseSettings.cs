@@ -12,4 +12,5 @@ public class DatabaseSettings : IDatabaseSettings
     public string SpecialOfferCollectionName { get; set; }
     public string FeaturedCollectionName { get; set; }
     public string OfferDiscountCollectionName { get; set; }
+    public string BrandCollectionName { get; set; }
 }
