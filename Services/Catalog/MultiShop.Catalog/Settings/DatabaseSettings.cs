@@ -11,4 +11,5 @@ public class DatabaseSettings : IDatabaseSettings
     public string FeaturedSliderCollectionName { get; set; }
     public string SpecialOfferCollectionName { get; set; }
     public string FeaturedCollectionName { get; set; }
+    public string OfferDiscountCollectionName { get; set; }
 }
