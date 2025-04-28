@@ -62,4 +62,15 @@ public class ProductService : IProductService
 
         return _mapper.Map<List<ResultProductWithCategoryDto>>(products);
     }
+
+    public async Task<List<ResultProductWithCategoryDto>> GetProductsWithCategoryByCategoryIdAsync(string CategoryId)
+    {
+        var products = await _productCollection.Find(p => p.CategoryId == CategoryId).ToListAsync();
+        foreach (var item in products)
+        {
+            item.Category = await _categoryCollection.Find<Category>(c => c.CategoryId == item.CategoryId).FirstAsync();
+        }
+
+        return _mapper.Map<List<ResultProductWithCategoryDto>>(products);
+    }
 }
