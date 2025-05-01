@@ -10,11 +10,11 @@ namespace MultiShop.Catalog.Controllers;
 [AllowAnonymous]
 //[Authorize]
 
-public class ProductDetails : ControllerBase
+public class ProductDetailsController : ControllerBase
 {
     private readonly IProductDetailService _productDetailService;
 
-    public ProductDetails(IProductDetailService productDetailService)
+    public ProductDetailsController(IProductDetailService productDetailService)
     {
         _productDetailService = productDetailService;
     }
@@ -22,15 +22,22 @@ public class ProductDetails : ControllerBase
     [HttpGet]
     public async Task<IActionResult> ProductDetailList()
     {
-        var categories = await _productDetailService.GetAllProductDetailAsync();
-        return Ok(categories);
+        var values = await _productDetailService.GetAllProductDetailAsync();
+        return Ok(values);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetProductDetailById(string id)
     {
-        var ProductDetail = await _productDetailService.GetByIdProductDetailAsync(id);
-        return Ok(ProductDetail);
+        var productDetail = await _productDetailService.GetByIdProductDetailAsync(id);
+        return Ok(productDetail);
+    }
+
+    [HttpGet("GetProductDetailByProductId")]
+    public async Task<IActionResult> GetProductDetailByProductId(string id)
+    {
+        var productDetail = await _productDetailService.GetByProductIdProductDetailAsync(id);
+        return Ok(productDetail);
     }
 
     [HttpPost]
