@@ -10,7 +10,8 @@ namespace MultiShop.Catalog.Controllers;
 [AllowAnonymous]
 //[Authorize]
 public class ProductImagesController : ControllerBase
-{ private readonly IProductImageService _productImageService;
+{
+    private readonly IProductImageService _productImageService;
 
     public ProductImagesController(IProductImageService productImageService)
     {
@@ -20,9 +21,17 @@ public class ProductImagesController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> ProductImageList()
     {
-        var categories = await _productImageService.GetAllProductImageAsync();
-        return Ok(categories);
+        var values = await _productImageService.GetAllProductImageAsync();
+        return Ok(values);
     }
+
+    [HttpGet("ProductImagesByProductId")]
+    public async Task<IActionResult> ProductImagesByProductId(string id)
+    {
+        var values = await _productImageService.GetByProductIdProductImageAsync(id);
+        return Ok(values);
+    }
+
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetProductImageById(string id)

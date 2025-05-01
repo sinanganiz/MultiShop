@@ -8,7 +8,7 @@ namespace MultiShop.Catalog.Services.ProductImageServices;
 
 public class ProductImageService : IProductImageService
 {
-        private readonly IMongoCollection<ProductImage> _ProductImageCollection;
+    private readonly IMongoCollection<ProductImage> _ProductImageCollection;
     private readonly IMapper _mapper;
 
     public ProductImageService(IMapper mapper, IDatabaseSettings databaseSettings)
@@ -33,14 +33,20 @@ public class ProductImageService : IProductImageService
 
     public async Task<List<ResultProductImageDto>> GetAllProductImageAsync()
     {
-        var categories = await _ProductImageCollection.Find(c => true).ToListAsync();
-        return _mapper.Map<List<ResultProductImageDto>>(categories);
+        var values = await _ProductImageCollection.Find(c => true).ToListAsync();
+        return _mapper.Map<List<ResultProductImageDto>>(values);
     }
 
     public async Task<GetByIdProductImageDto> GetByIdProductImageAsync(string id)
     {
         var ProductImage = await _ProductImageCollection.Find<ProductImage>(c => c.ProductImageId == id).FirstOrDefaultAsync();
         return _mapper.Map<GetByIdProductImageDto>(ProductImage);
+    }
+
+    public async Task<GetByIdProductImageDto> GetByProductIdProductImageAsync(string id)
+    {
+        var value = await _ProductImageCollection.Find(c => c.ProductId == id).FirstOrDefaultAsync();
+        return _mapper.Map<GetByIdProductImageDto>(value);
     }
 
     public async Task UpdateProductImageAsync(UpdateProductImageDto updateProductImageDto)
