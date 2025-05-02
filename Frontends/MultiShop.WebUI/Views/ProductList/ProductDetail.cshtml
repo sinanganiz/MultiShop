@@ -38,7 +38,7 @@
 
 					@await Component.InvokeAsync("_ProductDetailInformationComponentPartial", new { id = ViewBag.x })
 
-					@await Component.InvokeAsync("_ProductDetailReviewsComponentPartial")
+					@await Component.InvokeAsync("_ProductDetailReviewsComponentPartial", new { id = ViewBag.x })
 
 				</div>
 			</div>
