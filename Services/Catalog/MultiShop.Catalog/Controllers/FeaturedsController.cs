@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Catalog.Dtos.FeaturedDtos;
 using MultiShop.Catalog.Services.CategoryServices;
@@ -8,6 +9,7 @@ namespace MultiShop.Catalog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class FeaturedsController : ControllerBase
     {
         private readonly IFeaturedService _featuredService;

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MultiShop.Catalog.Dtos.OfferDiscounDtos;
 using MultiShop.Catalog.Services.OfferDiscountServices;
 
@@ -6,6 +7,7 @@ namespace MultiShop.Catalog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class OfferDiscountsController : ControllerBase
     {
         private readonly IOfferDiscountService _offerDiscountService;

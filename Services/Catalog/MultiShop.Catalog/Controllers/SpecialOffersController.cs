@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Catalog.Dtos.SpecialOfferDtos;
-using MultiShop.Catalog.Services.CategoryServices;
 using MultiShop.Catalog.Services.SpecialOfferServices;
 
 namespace MultiShop.Catalog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SpecialOffersController : ControllerBase
     {
         private readonly ISpecialOfferService _specialOfferService;

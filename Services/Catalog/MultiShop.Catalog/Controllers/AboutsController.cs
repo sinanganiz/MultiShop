@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MultiShop.Catalog.Dtos.AboutDtos;
 using MultiShop.Catalog.Services.AboutServices;
 
@@ -6,6 +7,7 @@ namespace MultiShop.Catalog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AboutsController : ControllerBase
     {
         private readonly IAboutService _aboutService;

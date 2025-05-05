@@ -1,16 +1,13 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MultiShop.Catalog.Dtos.CategoryDtos;
 using MultiShop.Catalog.Dtos.FeaturedSliderDtos;
-using MultiShop.Catalog.Services.CategoryServices;
 using MultiShop.Catalog.Services.FeaturedSliderServices;
 
 namespace MultiShop.Catalog.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[AllowAnonymous]
-//[Authorize]
+[Authorize]
 public class FeaturedSlidersController : ControllerBase
 {
     private readonly IFeaturedSliderService _featuredSliderService;
