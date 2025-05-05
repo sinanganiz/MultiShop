@@ -10,7 +10,8 @@ namespace MultiShop.IdentityServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(LocalApi.PolicyName)]
+    //[Authorize(LocalApi.PolicyName)]
+    [AllowAnonymous]
     public class RegistersController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
