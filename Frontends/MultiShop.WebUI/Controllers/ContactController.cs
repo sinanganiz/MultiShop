@@ -22,7 +22,7 @@ namespace MultiShop.WebUI.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Index(CreateContactDto createContactDto)
-        {
+        {  
             createContactDto.IsRead = false;
             createContactDto.SendDate = DateTime.Now;
 
