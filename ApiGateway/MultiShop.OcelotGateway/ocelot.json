@@ -4,8 +4,8 @@
         {
             "UpstreamScheme": "http",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamPathTemplate": "/api/{everything}",
-            "DownstreamPathTemplate": "/services/catalog/{everything}",
+            "UpstreamPathTemplate": "/services/catalog/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -23,8 +23,8 @@
         {
             "UpstreamScheme": "http",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamPathTemplate": "/api/{everything}",
-            "DownstreamPathTemplate": "/services/discount/{everything}",
+            "UpstreamPathTemplate": "/services/discount/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -42,8 +42,8 @@
         {
             "UpstreamScheme": "http",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamPathTemplate": "/api/{everything}",
-            "DownstreamPathTemplate": "/services/order/{everything}",
+            "UpstreamPathTemplate": "/services/order/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -61,8 +61,8 @@
         {
             "UpstreamScheme": "http",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamPathTemplate": "/api/{everything}",
-            "DownstreamPathTemplate": "/services/cargo/{everything}",
+            "UpstreamPathTemplate": "/services/cargo/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -80,8 +80,8 @@
         {
             "UpstreamScheme": "http",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamPathTemplate": "/api/{everything}",
-            "DownstreamPathTemplate": "/services/basket/{everything}",
+            "UpstreamPathTemplate": "/services/basket/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -100,8 +100,8 @@
         {
             "UpstreamScheme": "http",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamPathTemplate": "/api/{everything}",
-            "DownstreamPathTemplate": "/services/comment/{everything}",
+            "UpstreamPathTemplate": "/services/comment/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -119,8 +119,8 @@
         {
             "UpstreamScheme": "http",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamPathTemplate": "/api/{everything}",
-            "DownstreamPathTemplate": "/services/payment/{everything}",
+            "UpstreamPathTemplate": "/services/payment/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -138,8 +138,8 @@
         {
             "UpstreamScheme": "http",
             "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-            "UpstreamPathTemplate": "/api/{everything}",
-            "DownstreamPathTemplate": "/services/images/{everything}",
+            "UpstreamPathTemplate": "/services/images/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -149,7 +149,7 @@
             ],
             "AuthenticationOptions": {
                 "AuthenticationProviderKey": "OcelotAuthenticationScheme",
-                "AllowedScopes": [ "ImagesFullPermission" ]
+                "AllowedScopes": [ "ImageFullPermission" ]
             }
         }
     ],
