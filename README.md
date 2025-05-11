@@ -54,4 +54,5 @@ Each service runs in its own container, communicates via HTTP or messaging, and 
 ## 🧑‍💻 Author
 
 Developed by Sinan Ganiz
+
 Inspired by the Udemy course: "Asp.Net Core MultiShop Mikroservis E-Ticaret Kursu"
