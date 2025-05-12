@@ -1,13 +1,5 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using System.Text.Json;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MultiShop.DtoLayer.IdentityDtos.LoginDtos;
-using MultiShop.WebUI.Models;
-using MultiShop.WebUI.Services;
 using MultiShop.WebUI.Services.Abstract;
 
 namespace MultiShop.WebUI.Controllers
@@ -48,7 +40,7 @@ namespace MultiShop.WebUI.Controllers
             signInDto.Password = "";
 
             await _identityService.SignIn(signInDto);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "User");
         }
     }
 }
